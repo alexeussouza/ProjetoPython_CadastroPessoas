@@ -1,0 +1,140 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Título principal */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Formulário para adicionar uma nova pessoa */
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Estilização da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Estilização dos botões */
+.botoes {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    justify-content: center; /* Centraliza os botões */
+}
+
+.botoes form {
+    display: flex;
+    align-items: center; /* Alinha os botões na vertical */
+    gap: 5px; /* Espaçamento entre os botões */
+}
+
+.botoes button {
+    height: 36px; /* Garante que os botões tenham a mesma altura */
+    display: flex;
+    align-items: center; /* Centraliza o texto do botão */
+    justify-content: center;
+}
+
+
+.inline-form {
+    display: inline;
+}
+
+button {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    background-color: orange;
+}
+
+.edit-btn:hover {
+    background-color: darkorange;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    .botoes {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+    }
+}

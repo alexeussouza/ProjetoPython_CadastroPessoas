@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Pessoas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <h2>Cadastro de Pessoas</h2>
+
+    <!-- Formulário para adicionar nova pessoa -->
+    <form action="{{ url_for('adicionar') }}" method="post">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="telefone" placeholder="Telefone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Adicionar Pessoa</button>
+    </form>
+
+    <!-- Tabela para listar as pessoas cadastradas -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{ pessoa.id }}</td> <!-- Exibe o ID -->
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.telefone }}</td>
+            <td>{{ pessoa.email }}</td>
+            <td>
+                <div class="botoes">
+                    <!-- Formulário para editar -->
+                    <form action="{{ url_for('alterar', id=pessoa.id) }}" method="post" class="inline-form">
+                        <input type="text" name="nome" placeholder="Novo Nome" required>
+                        <input type="text" name="telefone" placeholder="Novo Telefone" required>
+                        <input type="email" name="email" placeholder="Novo Email" required>
+                        <button type="submit" class="edit-btn">Alterar</button>
+                    </form>
+
+                    <!-- Formulário para excluir -->
+                    <form action="{{ url_for('excluir', id=pessoa.id) }}" method="post" class="inline-form">
+                        <button type="submit" class="delete-btn" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- Paginação -->
+    <div class="pagination">
+        {% if page > 1 %}
+        <a href="{{ url_for('index', page=page-1) }}" class="page-btn">← Página Anterior</a>
+        {% endif %}
+
+        <span>Página {{ page }} de {{ total_paginas }}</span>
+
+        {% if page < total_paginas %} <a href="{{ url_for('index', page=page+1) }}" class="page-btn">Próxima Página →</a>
+            {% endif %}
+    </div>
+
+</body>
+
+</html>

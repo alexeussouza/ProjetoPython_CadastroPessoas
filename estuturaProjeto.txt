@@ -1,0 +1,10 @@
+# Estrutura do projeto:
+# /meu_projeto
+# ├── app/
+# │   ├── __init__.py
+# │   ├── models.py
+# │   ├── controllers.py
+# │   ├── routes.py
+# ├── templates/
+# │   ├── index.html
+# ├── run.py
