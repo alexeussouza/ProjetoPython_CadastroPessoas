@@ -1,6 +1,6 @@
 :
 
-🐍 Sistema de Listagem de Registros com Flask + MySQL
+🐍 Sistema de Cadastro de Registros com Flask + MySQL
 Aplicação web desenvolvida em Python com o microframework Flask, utilizando a arquitetura MVC e o mecanismo de templates Jinja2.
 Permite a listagem de registros com paginação, exibindo 5 registros por página. O projeto utiliza MySQL como banco de dados, rodando em um container Docker.
 
