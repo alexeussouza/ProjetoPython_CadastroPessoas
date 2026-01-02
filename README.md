@@ -1,11 +1,11 @@
 :
 
-🐍 Sistema de Cadastro de Registros com Flask + MySQL
+# 🐍 Sistema de Cadastro de Registros com Flask + MySQL
 
 - Aplicação web desenvolvida em Python com o microframework Flask, utilizando a arquitetura MVC e o mecanismo de templates Jinja2.
 Permite a listagem de registros com paginação, exibindo 5 registros por página. O projeto utiliza MySQL como banco de dados, rodando em um container Docker.
 
-🚀 Funcionalidades
+# 🚀 Funcionalidades
 
 - Listagem de registros paginada (5 por página)
 
@@ -17,7 +17,7 @@ Permite a listagem de registros com paginação, exibindo 5 registros por págin
 
 - Integração com banco de dados relacional via MySQL Connector
 
-🛠 Tecnologias Utilizadas
+# 🛠 Tecnologias Utilizadas
 - Python 3.10+
 
 - Flask
@@ -30,7 +30,7 @@ Permite a listagem de registros com paginação, exibindo 5 registros por págin
 
 - HTML + Bootstrap
 
-🗂 Estrutura MVC
+# 🗂 Estrutura MVC
 models/: Representações dos dados (conexão com o MySQL)
 
 controllers/: Regras de negócio e controle de fluxo
@@ -39,7 +39,15 @@ templates/: Views HTML com Jinja2
 
 app.py: Arquivo principal da aplicação
 
-💻 Como Executar Localmente
+# 🔌 Banco de Dados
+
+O container do MySQL roda com as seguintes configurações (definidas em docker-compose.yml):
+
+environment:
+  - MYSQL_ROOT_PASSWORD=123456
+  - MYSQL_DATABASE=flask_app
+
+# 💻 Como Executar Localmente
 Pré-requisitos
 - Python 3 instalado
 
@@ -47,7 +55,7 @@ Pré-requisitos
 
 - Pip ou pipenv
 
-Passo a passo
+# Passo a passo
 Clone o repositório:
 
 git clone https://github.com/seuusuario/nome-do-repo.git
@@ -65,16 +73,8 @@ python app.py
 Acesse no navegador:
 http://localhost:5000
 
-🔌 Banco de Dados
 
-O container do MySQL roda com as seguintes configurações (definidas em docker-compose.yml):
-
-environment:
-  - MYSQL_ROOT_PASSWORD=123456
-  - MYSQL_DATABASE=flask_app
-
-
-👨‍💻 Autor
+# 👨‍💻 Autor
 Desenvolvido por Alexandre de Souza Eustaquio.
 
 Feedbacks e contribuições são sempre bem-vindos!
