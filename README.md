@@ -1,32 +1,34 @@
 :
 
 🐍 Sistema de Cadastro de Registros com Flask + MySQL
-Aplicação web desenvolvida em Python com o microframework Flask, utilizando a arquitetura MVC e o mecanismo de templates Jinja2.
+
+- Aplicação web desenvolvida em Python com o microframework Flask, utilizando a arquitetura MVC e o mecanismo de templates Jinja2.
 Permite a listagem de registros com paginação, exibindo 5 registros por página. O projeto utiliza MySQL como banco de dados, rodando em um container Docker.
 
 🚀 Funcionalidades
-Listagem de registros paginada (5 por página)
 
-Botões para navegação entre páginas
+- Listagem de registros paginada (5 por página)
 
-Renderização dinâmica com Jinja2
+- Botões para navegação entre páginas
 
-Estrutura limpa com padrão MVC
+- Renderização dinâmica com Jinja2
 
-Integração com banco de dados relacional via MySQL Connector
+- Estrutura limpa com padrão MVC
+
+- Integração com banco de dados relacional via MySQL Connector
 
 🛠 Tecnologias Utilizadas
-Python 3.10+
+- Python 3.10+
 
-Flask
+- Flask
 
-Jinja2
+- Jinja2
 
-MySQL
+- MySQL
 
-Docker
+- Docker
 
-HTML + Bootstrap (para o layout e os botões, se aplicável)
+- HTML + Bootstrap
 
 🗂 Estrutura MVC
 models/: Representações dos dados (conexão com o MySQL)
@@ -39,63 +41,42 @@ app.py: Arquivo principal da aplicação
 
 💻 Como Executar Localmente
 Pré-requisitos
-Python 3 instalado
+- Python 3 instalado
 
-Docker e Docker Compose
+- Docker e Docker Compose
 
-Pip ou pipenv
+- Pip ou pipenv
 
 Passo a passo
 Clone o repositório:
 
-bash
-Copiar
-Editar
 git clone https://github.com/seuusuario/nome-do-repo.git
 cd nome-do-repo
+
 Suba o banco de dados MySQL com Docker:
-
-bash
-Copiar
-Editar
 docker-compose up -d
+
 Instale as dependências:
-
-bash
-Copiar
-Editar
 pip install -r requirements.txt
+
 Rode a aplicação:
-
-bash
-Copiar
-Editar
 python app.py
-Acesse no navegador:
 
-arduino
-Copiar
-Editar
+Acesse no navegador:
 http://localhost:5000
+
 🔌 Banco de Dados
+
 O container do MySQL roda com as seguintes configurações (definidas em docker-compose.yml):
 
-yml
-Copiar
-Editar
 environment:
   - MYSQL_ROOT_PASSWORD=123456
   - MYSQL_DATABASE=flask_app
-A string de conexão pode estar assim:
-
-python
-Copiar
-Editar
-mysql+pymysql://root:123456@localhost:3306/flask_app
 
 
 👨‍💻 Autor
 Desenvolvido por Alexandre de Souza Eustaquio.
+
 Feedbacks e contribuições são sempre bem-vindos!
 
 
